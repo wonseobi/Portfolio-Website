@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../components";
 
 :root {
   --bg: #0a0a0f;
@@ -6,15 +7,18 @@
   --accent-2: #a78bfa;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: var(--bg);
   color: #e2e8f0;
   font-family: Inter, system-ui, sans-serif;
   line-height: 1.6;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
 }
