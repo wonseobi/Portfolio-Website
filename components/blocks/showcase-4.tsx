@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import { BorderGlow } from "@/components/BorderGlow";
+import Image from "next/image";
 
 const filters = ["All", "Web", "Mobile", "UI/UX"] as const;
 type Filter = (typeof filters)[number];
@@ -26,7 +27,8 @@ const projects: Project[] = [
     description: "High-performance digital platform for a crypto hedge fund focused on credibility, investor trust, and premium brand positioning. Conversion-focused user flows designed for high-value financial audiences.",
     year: "2025",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://daytonaliberty.com/",
+    image: "/images/projects/daytona_liberty.jpg",
   },
   {
     id: 2,
@@ -34,7 +36,8 @@ const projects: Project[] = [
     description: "Scalable marketing platform built to showcase services, generate qualified leads, and strengthen brand authority through modern UI systems and high-conversion user experiences.",
     year: "2025",
     tags: ["Web"],
-    href: "#",
+    href: "https://www.xponentmarketing.com/",
+    image: "/images/projects/xponent_marketing.jpg",
   },
   {
     id: 3,
@@ -42,7 +45,7 @@ const projects: Project[] = [
     description: "Conversion-optimized landing experience for paid advertising traffic in the Florida medical aesthetics market. Mobile-first UX and streamlined lead capture funnels to maximize appointment bookings.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/floss_botox.jpg",
   },
   {
     id: 4,
@@ -50,7 +53,7 @@ const projects: Project[] = [
     description: "High-converting healthcare acquisition funnel targeting weight-loss and semaglutide campaigns. Responsive frontend systems and strategic CTA flows designed to improve lead generation performance.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/floss_semaglutide.jpg",
   },
   {
     id: 5,
@@ -58,7 +61,8 @@ const projects: Project[] = [
     description: "Modern healthcare platform for a Colorado-based practice focused on usability, accessibility, and patient trust. Scalable frontend architecture optimized for long-term growth.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://arvadadentalcenter.com/",
+    image: "/images/projects/arvada_dental.jpg",
   },
   {
     id: 6,
@@ -66,7 +70,8 @@ const projects: Project[] = [
     description: "Streamlined business platform for a medical billing company operating in a highly competitive industry. Clean UX simplifying complex service communication with scalable frontend systems.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://aoxmedicalbilling.com/",
+    image: "/images/projects/aox_billing_solutions.jpg",
   },
   {
     id: 7,
@@ -74,7 +79,7 @@ const projects: Project[] = [
     description: "Responsive digital experience for an Illinois-based healthcare brand emphasizing credibility, accessibility, and performance. Optimized frontend interactions to support stronger patient acquisition.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/elkgrove.jpg",
   },
   {
     id: 8,
@@ -82,7 +87,7 @@ const projects: Project[] = [
     description: "Polished healthcare experience focused on branding, responsiveness, and conversion-focused design systems. Scalable UI components and modern frontend architecture for long-term scalability.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/forever_smiles.jpg",
   },
   {
     id: 9,
@@ -90,7 +95,8 @@ const projects: Project[] = [
     description: "Specialized healthcare platform for a Pennsylvania-based implant provider with a strong focus on trust-building and consultation conversion. Responsive systems optimized for high-intent patient traffic.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://mordentalimplantcenter.com/",
+    image: "/images/projects/mordentalimplants.jpg",
   },
   {
     id: 10,
@@ -98,7 +104,7 @@ const projects: Project[] = [
     description: "Campaign-focused lead generation experience targeting Invisalign traffic in Florida. Fast-loading pages, responsive UI patterns, and conversion-driven flows optimized for paid media performance.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/floss_invisalign.jpg",
   },
   {
     id: 11,
@@ -106,7 +112,7 @@ const projects: Project[] = [
     description: "High-performance insurance landing platform designed to support lead acquisition and improve conversion rates. Responsive UX, optimized load speed, and scalable frontend architecture.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/HVCO.jpg",
   },
   {
     id: 12,
@@ -114,7 +120,8 @@ const projects: Project[] = [
     description: "Modern California healthcare platform engineered around accessibility, responsive design, and streamlined patient experiences. Improved usability through scalable UI systems and optimized frontend performance.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://orcutthillsdental.com/",
+    image: "/images/projects/orcutt_hills.jpg",
   },
   {
     id: 13,
@@ -122,7 +129,8 @@ const projects: Project[] = [
     description: "Scalable digital experience for a California-based healthcare brand focused on clean UX and modern visual systems. Responsive interfaces designed to improve engagement and trust.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://penaadobedental.com/",
+    image: "/images/projects/pena_adobe.jpg",
   },
   {
     id: 14,
@@ -130,7 +138,7 @@ const projects: Project[] = [
     description: "Dynamic motorsports-focused platform built around high-energy branding and immersive visual experiences. Responsive interactions, modern frontend animation systems, and audience engagement.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/daytona_cup.jpg",
   },
   {
     id: 15,
@@ -138,7 +146,8 @@ const projects: Project[] = [
     description: "Modern healthcare platform balancing premium branding with conversion-focused functionality. Responsive frontend systems optimized for scalability and usability.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://www.connectiondentistryraleigh.com/",
+    image: "/images/projects/connection_dentistry.jpg",
   },
   {
     id: 16,
@@ -146,7 +155,8 @@ const projects: Project[] = [
     description: "High-performance healthcare experience for a North Carolina-based brand focused on patient acquisition and strong visual identity. Responsive UI systems and scalable frontend architecture.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://boomsmilesgroup.com/",
+    image: "/images/projects/boom_smiles.jpg",
   },
   {
     id: 17,
@@ -154,7 +164,8 @@ const projects: Project[] = [
     description: "Premium digital experience for a Pennsylvania-based healthcare provider with a strong emphasis on trust, branding, and usability. Clean frontend implementation and optimized performance.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://paroyalsmiles.vdsupport.com/",
+    image: "/images/projects/royal_smiles.jpg",
   },
   {
     id: 18,
@@ -162,7 +173,8 @@ const projects: Project[] = [
     description: "Scalable healthcare platform for an Arizona-based integrated health provider. Accessibility, responsive architecture, and modern UI systems designed to improve engagement and conversion.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://westwindintegratedhealth.com/",
+    image: "/images/projects/westwind.jpg",
   },
   {
     id: 19,
@@ -170,7 +182,8 @@ const projects: Project[] = [
     description: "Legal services platform engineered around authority, accessibility, and lead generation for the Florida market. Responsive frontend systems optimized for high-conversion user journeys.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://injurycounselfl.com/",
+    image: "/images/projects/injury_counsel_fl.jpg",
   },
   {
     id: 20,
@@ -178,7 +191,8 @@ const projects: Project[] = [
     description: "Conversion-focused medical acquisition platform targeting high-intent healthcare traffic in Arizona. Modern frontend systems and optimized CTA structures for stronger lead performance.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://onedmiplus.ai/4",
+    image: "/images/projects/onedmi.jpg",
   },
   {
     id: 21,
@@ -186,7 +200,8 @@ const projects: Project[] = [
     description: "Specialized healthcare platform for a New Jersey implant provider focused on premium branding and consultation generation. Scalable frontend systems and streamlined patient experiences.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://monroedentalandimplants.com/",
+    image: "/images/projects/monroe_dental.jpg",
   },
   {
     id: 22,
@@ -194,7 +209,7 @@ const projects: Project[] = [
     description: "Modern healthcare-focused digital experience designed around usability, performance, and responsive design systems. Scalable frontend architecture and conversion-oriented UX.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/bondds.jpg",
   },
   {
     id: 23,
@@ -202,7 +217,7 @@ const projects: Project[] = [
     description: "Scalable healthcare platform for a Texas-based provider with strong emphasis on accessibility and user engagement. Responsive systems optimized for performance and patient acquisition.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/san_antonio_dental.jpg",
   },
   {
     id: 24,
@@ -210,7 +225,8 @@ const projects: Project[] = [
     description: "Premium implant-focused platform for the Florida market engineered to improve trust, branding, and lead generation. Responsive UX and high-conversion frontend implementation.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    href: "https://sonrisaflorida.com/",
+    image: "/images/projects/sonrisa_dental_specialists.jpg",
   },
   {
     id: 25,
@@ -218,7 +234,7 @@ const projects: Project[] = [
     description: "Modern healthcare experience focused on intuitive navigation, responsive systems, and premium visual presentation. Optimized frontend performance and engagement across all devices.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/juliadds.jpg",
   },
   {
     id: 26,
@@ -226,7 +242,7 @@ const projects: Project[] = [
     description: "Scalable California healthcare platform designed around clean UX, responsive frontend systems, and modern branding. Performance optimization and seamless user interaction.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/manteca_dental.jpg",
   },
   {
     id: 27,
@@ -234,7 +250,7 @@ const projects: Project[] = [
     description: "Marketing-focused platform tailored for surgical and healthcare advertising campaigns. Scalable frontend architecture optimized for performance, branding, and lead generation.",
     year: "2025",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/surgical_marketing.jpg",
   },
   {
     id: 28,
@@ -242,7 +258,8 @@ const projects: Project[] = [
     description: "High-conversion legal landing experience engineered for aggressive lead acquisition campaigns in Florida. Responsive UX, fast load performance, and optimized user flows.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://injurycounselfl.com/consultation/",
+    image: "/images/projects/injury_counsel_fl_lp.jpg",
   },
   {
     id: 29,
@@ -250,7 +267,8 @@ const projects: Project[] = [
     description: "Digital presence for an internal AI-focused initiative combining modern branding with scalable frontend systems. Sleek, future-oriented experience focused on innovation and AI-driven marketing solutions.",
     year: "2025",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://itspraxis.ai/",
+    image: "/images/projects/praxis_ai.jpg",
   },
   // ── Certerus (2023–2024) ───────────────────────────────────────────
   {
@@ -259,7 +277,7 @@ const projects: Project[] = [
     description: "Hospitality booking platform focused on seamless reservation flows, responsive UX, and premium visual presentation. Frontend systems designed to improve usability and customer conversion.",
     year: "2024",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/rooftop_geovana.jpg",
   },
   {
     id: 31,
@@ -267,7 +285,8 @@ const projects: Project[] = [
     description: "Professional security-focused platform emphasizing credibility, authority, and modern frontend architecture. Responsive systems optimized for service inquiries and lead generation.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    href: "https://securlife.com.mx/",
+    image: "/images/projects/securlife.jpg",
   },
   {
     id: 32,
@@ -275,7 +294,8 @@ const projects: Project[] = [
     description: "Scalable e-commerce experiences for a building materials platform handling large product catalogs and customer interactions. Responsive UI systems, performance optimization, and intuitive shopping flows.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    href: "https://www.plaforama.com/",
+    image: "/images/projects/plaforama.jpg",
   },
   {
     id: 33,
@@ -283,7 +303,7 @@ const projects: Project[] = [
     description: "High-conversion service acquisition platform designed to support local advertising campaigns and lead generation. Responsive UX and streamlined frontend interactions.",
     year: "2023",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/aztec_plumbing_lp.jpg",
   },
   {
     id: 34,
@@ -291,7 +311,7 @@ const projects: Project[] = [
     description: "Collaborative productivity platform designed for managing teams, workflows, and internal operations. Scalable frontend architecture and clean, intuitive user experiences.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    image: "/images/projects/flowme.jpg",
   },
   {
     id: 35,
@@ -299,7 +319,7 @@ const projects: Project[] = [
     description: "Modern event discovery platform enabling users to explore local experiences through responsive and user-friendly interfaces. Scalable frontend systems optimized for engagement.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/nearby.jpg",
   },
   {
     id: 36,
@@ -307,7 +327,8 @@ const projects: Project[] = [
     description: "E-commerce-focused digital experience centered around seasonal branding and product presentation. Responsive interactions and visually engaging frontend systems.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    href: "https://lucesynovedades.com.mx/",
+    image: "/images/projects/lights_and_novelties.jpg",
   },
   {
     id: 37,
@@ -315,7 +336,8 @@ const projects: Project[] = [
     description: "Modern real estate platform engineered around property discovery, responsive UX, and premium presentation. Scalable frontend systems and intuitive browsing experiences.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    href: "https://inmotrev.com/",
+    image: "/images/projects/inmotrev_real_estate.jpg",
   },
   {
     id: 38,
@@ -323,7 +345,8 @@ const projects: Project[] = [
     description: "Primary digital acquisition platform focused on branding, service presentation, and lead conversion. Scalable UI systems optimized for performance and growth.",
     year: "2023",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://www.certerus.com/aula-empresarial/",
+    image: "/images/projects/certerus_lp.webp",
   },
   {
     id: 39,
@@ -331,7 +354,7 @@ const projects: Project[] = [
     description: "Cross-platform mobile applications for managing domains, websites, and digital services across iOS and Android. Scalable React Native architecture and seamless user experiences.",
     year: "2024",
     tags: ["Mobile"],
-    href: "#",
+    image: "/images/projects/certerus_app.jpg",
   },
   {
     id: 40,
@@ -339,7 +362,7 @@ const projects: Project[] = [
     description: "Educational platform focused on delivering structured learning experiences through modern responsive systems. Scalable frontend architecture optimized for accessibility and usability.",
     year: "2023",
     tags: ["Web"],
-    href: "#",
+    image: "/images/projects/mentor_e_learning.jpg",
   },
   // ── Personal Projects ──────────────────────────────────────────────
   {
@@ -348,7 +371,8 @@ const projects: Project[] = [
     description: "Productivity-focused habit tracking application centered around consistency, motivation, and clean UX. Scalable mobile systems with a strong emphasis on user engagement and retention.",
     year: "2024",
     tags: ["Mobile"],
-    href: "#",
+    href: "https://www.figma.com/proto/Zir0qUqmCDvtwRIZcx379V/Streakify-App?node-id=22-423&starting-point-node-id=22%3A423&t=BXvZSAh8b5hGqLVc-1",
+    image: "/images/projects/streakify.jpg",
   },
   {
     id: 42,
@@ -356,7 +380,8 @@ const projects: Project[] = [
     description: "Modern weather application focused on real-time data visualization and responsive mobile experiences. Intuitive UI systems designed for speed, clarity, and usability.",
     year: "2023",
     tags: ["Mobile"],
-    href: "#",
+    href: "https://www.figma.com/proto/PM560bWw6spRbLvQWWkckA/Weatherly-App?node-id=2002-211&starting-point-node-id=2002%3A211&t=K7tgylJugD9YIIbx-1",
+    image: "/images/projects/weatherly.jpg",
   },
   {
     id: 43,
@@ -364,7 +389,8 @@ const projects: Project[] = [
     description: "Modern crypto investing platform focused on premium branding, market credibility, and high-performance frontend systems. Responsive user experiences and sleek UI interactions designed to communicate trust and innovation.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "https://blocquant.com",
+    href: "https://blocquant.com/",
+    image: "/images/projects/blocquant.jpg",
   },
   {
     id: 44,
@@ -372,7 +398,8 @@ const projects: Project[] = [
     description: "Professional real estate investment platform centered around authority, premium presentation, and seamless user experience. Scalable frontend architecture showcasing investment opportunities with clarity and sophistication.",
     year: "2025",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://synergy.blocquant.com/",
+    image: "/images/projects/syngery.jpg",
   },
   {
     id: 46,
@@ -380,7 +407,8 @@ const projects: Project[] = [
     description: "Official recruitment platform for DDS Marketing focused on attracting top-tier talent through modern branding and streamlined candidate experiences. Conversion-focused user flows designed to support hiring growth and improve applicant engagement.",
     year: "2025",
     tags: ["Web"],
-    href: "#",
+    href: "https://ddsmarketing.io/recruitment/",
+    image: "/images/projects/dds_marketing_recruitment.jpg",
   },
   {
     id: 45,
@@ -388,16 +416,28 @@ const projects: Project[] = [
     description: "Visually immersive portfolio experience for a digital artist and animation specialist. Modern UI/UX, fluid interactions, and cinematic presentation systems highlighting creative work. Responsive frontend architecture optimized for performance, storytelling, and visual impact.",
     year: "2024",
     tags: ["Web", "UI/UX"],
-    href: "#",
+    href: "https://www.figma.com/proto/lpfSykBVYm94IOaC9Anird/Alfonso-Emanuel-Portfolio-Website?page-id=0%3A1&node-id=2002-2&p=f&viewport=2238%2C74%2C0.4&t=ojVCmnlmo1VRVAkT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2002%3A2",
+    image: "/images/projects/alfonso_emanuel.jpg",
   },
 ];
+
+const INITIAL_LIMIT = 16;
 
 export function Showcase4() {
   const [active, setActive] = useState<Filter>("All");
   const [selected, setSelected] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const visible =
     active === "All" ? projects : projects.filter((p) => p.tags.includes(active));
+
+  const visibleProjects = showAll ? visible : visible.slice(0, INITIAL_LIMIT);
+  const hasMore = visible.length > INITIAL_LIMIT && !showAll;
+
+  // Reset "show all" when filter changes
+  useEffect(() => {
+    setShowAll(false);
+  }, [active]);
 
   // Close on Escape
   useEffect(() => {
@@ -477,7 +517,7 @@ export function Showcase4() {
         {/* Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           <AnimatePresence mode="popLayout" initial={false}>
-            {visible.map((p, i) => (
+            {visibleProjects.map((p, i) => (
               <motion.div
                 key={p.id}
                 layout
@@ -494,14 +534,15 @@ export function Showcase4() {
               >
                 <BorderGlow className="aspect-video w-full" borderRadius={16}>
                   {p.image && (
-                    <motion.img
+                    <Image
                       src={p.image}
                       alt={p.title}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="object-cover opacity-95 group-hover:scale-105 transition-all duration-500"
                     />
                   )}
-                  <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
+                  <div className="absolute bottom-2 left-2 flex flex-wrap gap-1 z-10">
                     {p.tags.map((t) => (
                       <span
                         key={t}
@@ -522,6 +563,22 @@ export function Showcase4() {
             ))}
           </AnimatePresence>
         </div>
+
+        {/* View More button */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-center mt-10"
+          >
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-3 rounded-full border border-neutral-700 text-sm text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors cursor-pointer tracking-[0.1em] uppercase font-medium"
+            >
+              View all {visible.length} projects
+            </button>
+          </motion.div>
+        )}
       </div>
 
       {/* Modal */}
@@ -555,10 +612,12 @@ export function Showcase4() {
                 {/* Image */}
                 <div className="relative aspect-video w-full overflow-hidden bg-neutral-800">
                   {selected.image && (
-                    <img
+                    <Image
                       src={selected.image}
                       alt={selected.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-90"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 672px"
+                      className="object-cover"
                     />
                   )}
                   {/* Close button */}
@@ -590,7 +649,7 @@ export function Showcase4() {
                   <p className="text-sm text-neutral-400 leading-relaxed mb-6">
                     {selected.description}
                   </p>
-                  {selected.href !== "#" && (
+                  {!!selected.href && (
                     <a
                       href={selected.href}
                       target="_blank"

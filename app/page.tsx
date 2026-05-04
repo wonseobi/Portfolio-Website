@@ -9,7 +9,7 @@ import { SocialProof8 } from "@/components/blocks/social-proof-8";
 import { Faq4 } from "@/components/blocks/faq-4";
 import { Cta6 } from "@/components/blocks/cta-6";
 import { Auth1 } from "@/components/blocks/auth-1";
-import { Footer8 } from "@/components/blocks/footer-8";
+import { Footer7 } from "@/components/blocks/footer-7";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         <Cta6 />
         <Faq4 />
         <Auth1 />
-        <Footer8 />
+        <Footer7 />
       </div>
     </>
   );
