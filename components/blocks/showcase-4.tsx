@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 
-const filters = ["All", "Web", "Mobile", "Crypto"] as const;
+const filters = ["All", "Web", "Mobile", "UI/UX"] as const;
 type Filter = (typeof filters)[number];
 
 interface Project {
@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: "Blocquant",
     description: "Crypto trading digital platform with a conversion-driven web experience, real-time data, and modern UI/UX built for high-frequency traders.",
     year: "2024",
-    tags: ["Web", "Crypto"],
+    tags: ["Web", "UI/UX"],
     href: "https://blocquant.com",
     image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&q=80",
   },
@@ -77,7 +77,7 @@ const projects: Project[] = [
     title: "Crypto Exchange UI",
     description: "Dashboard UI for a crypto exchange platform with live price feeds, portfolio tracking, and a dark-mode-first design system.",
     year: "2024",
-    tags: ["Web", "Crypto"],
+    tags: ["Web", "UI/UX"],
     href: "#",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
   },
