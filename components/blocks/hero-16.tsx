@@ -1,15 +1,10 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import { useState } from "react";
 
 export function Hero16() {
-  const [isCtaHovered, setIsCtaHovered] = useState(false);
-
   return (
     <section className="relative w-full min-h-screen flex flex-col py-12 px-8 sm:px-12 lg:px-20">
-      {/* Content Layer */}
       <div className="max-w-[1400px] mx-auto w-full flex flex-col flex-1">
         {/* Top — Logo */}
         <motion.div
@@ -53,27 +48,20 @@ export function Hero16() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="flex items-center gap-2.5 w-full sm:w-auto shrink-0"
-            onMouseEnter={() => setIsCtaHovered(true)}
-            onMouseLeave={() => setIsCtaHovered(false)}
           >
             <motion.a
-              href="#projects"
+              href="#works"
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center flex-1 sm:flex-none px-7 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neutral-800 border border-neutral-700 text-white text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
             >
-              View my work
+              View My Work
             </motion.a>
             <motion.a
-              href="#projects"
+              href="#contact"
               whileTap={{ scale: 0.95 }}
-              className="shrink-0 inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white text-neutral-900 cursor-pointer hover:bg-neutral-200 transition-colors duration-200"
+              className="shrink-0 inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-xl bg-white text-neutral-900 text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-200 transition-colors duration-200 whitespace-nowrap"
             >
-              <motion.span
-                animate={{ x: isCtaHovered ? 3 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </motion.span>
+              Work With Me
             </motion.a>
           </motion.div>
         </div>

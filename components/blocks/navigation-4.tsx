@@ -24,7 +24,7 @@ export function Navigation4() {
 
   const navItems = [
     { id: "home", icon: Home, label: "Home", href: "#home" },
-    { id: "works", icon: Briefcase, label: "Works", href: "#projects" },
+    { id: "works", icon: Briefcase, label: "Works", href: "#works" },
     { id: "profile", icon: User, label: "About", href: "#about" },
     { id: "contact", icon: Mail, label: "Contact", href: "#contact" },
   ];
