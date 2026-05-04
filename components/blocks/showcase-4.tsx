@@ -433,7 +433,7 @@ const projects: Project[] = [
 //      Xponent=2, Injury Counsel FL=19, Royal Smiles=17, Daytona Liberty=1,
 //      Orcutt Hills=12, Sonrisa=24, Synergy=44, AOX=6,
 //      Rooftop Geovana=30, Mentor E-Learning=40, Certerus App=39, Connection Dentistry=15
-const DEFAULT_ORDER_IDS = [43, 46, 29, 38, 2, 19, 17, 1, 12, 24, 44, 6, 30, 40, 39, 15];
+const DEFAULT_ORDER_IDS = [17, 43, 30, 2, 46, 12, 44, 19, 29, 15, 38, 6, 1, 40, 24, 39];
 
 const projectMap = new Map(projects.map((p) => [p.id, p]));
 
