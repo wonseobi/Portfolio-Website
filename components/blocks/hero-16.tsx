@@ -50,16 +50,16 @@ export function Hero16() {
             className="flex items-center gap-2.5 w-full sm:w-auto shrink-0"
           >
             <motion.a
-              href="#works"
+              href="#projects"
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center flex-1 sm:flex-none px-7 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-neutral-800 border border-neutral-700 text-white text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
+              className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-neutral-800 border border-neutral-700 text-white text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
             >
               View My Work
             </motion.a>
             <motion.a
               href="#contact"
               whileTap={{ scale: 0.95 }}
-              className="shrink-0 inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-xl bg-white text-neutral-900 text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-200 transition-colors duration-200 whitespace-nowrap"
+              className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-white text-neutral-900 text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-200 transition-colors duration-200 whitespace-nowrap"
             >
               Work With Me
             </motion.a>

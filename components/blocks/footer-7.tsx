@@ -51,7 +51,7 @@ export function Footer7() {
             <ul className="flex flex-col gap-2 text-xl sm:text-2xl text-white">
               {[
                 { label: "Home", href: "#home" },
-                { label: "Projects", href: "#works" },
+                { label: "Projects", href: "#projects" },
                 { label: "About", href: "#about" },
                 { label: "Contact", href: "#contact" },
               ].map((l) => (
