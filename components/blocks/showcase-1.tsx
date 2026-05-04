@@ -168,23 +168,23 @@ export function Showcase1() {
                 className="w-full"
               >
                 {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-white mb-1">
+                <div className="mb-8">
+                  <h3 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
                     {activeJob.role}
                   </h3>
-                  <p className="text-sm text-neutral-400">
+                  <p className="text-base text-neutral-400">
                     {activeJob.company} · {activeJob.location}
                   </p>
-                  <p className="text-xs text-neutral-500 mt-1 tracking-wide">
+                  <p className="text-sm text-neutral-500 mt-1 tracking-wide">
                     {activeJob.period}
                   </p>
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {activeJob.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-neutral-300 leading-relaxed">
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-neutral-500 shrink-0" />
+                    <li key={i} className="flex gap-4 text-base text-neutral-300 leading-relaxed">
+                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-neutral-500 shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -195,7 +195,7 @@ export function Showcase1() {
                   {activeJob.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`text-xs px-3 py-1 rounded-full border ${tagColors[tag] ?? "border-neutral-700 bg-transparent text-neutral-400"}`}
+                      className={`text-sm px-4 py-1.5 rounded-full border ${tagColors[tag] ?? "border-neutral-700 bg-transparent text-neutral-400"}`}
                     >
                       {tag}
                     </span>
