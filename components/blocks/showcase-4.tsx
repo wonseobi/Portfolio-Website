@@ -352,7 +352,7 @@ const projects: Project[] = [
   },
   {
     id: 42,
-    title: "Weatherlyh",
+    title: "Weatherly",
     description: "Modern weather application focused on real-time data visualization and responsive mobile experiences. Intuitive UI systems designed for speed, clarity, and usability.",
     year: "2023",
     tags: ["Mobile"],
