@@ -2,22 +2,41 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import Image from "next/image";
 
-const projectImages = [
-  "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&q=80",
-  "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-  "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
-  "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
-  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-  "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-  "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
-  "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+// ── Real project images spread across industries ──────────────────────────────
+const row1Images = [
+  "/images/projects/blocquant.jpg",
+  "/images/projects/daytona_liberty.jpg",
+  "/images/projects/praxis_ai.jpg",
+  "/images/projects/injury_counsel_fl.jpg",
+  "/images/projects/syngery.jpg",
+  "/images/projects/flowme.jpg",
+  "/images/projects/streakify.jpg",
+  "/images/projects/royal_smiles.jpg",
 ];
 
-// Three rows with shuffled order
-const row1 = [0, 3, 6, 1, 4, 7, 2, 5].map((i) => projectImages[i]);
-const row2 = [2, 5, 0, 7, 3, 6, 1, 4].map((i) => projectImages[i]);
-const row3 = [4, 1, 7, 2, 5, 0, 6, 3].map((i) => projectImages[i]);
+const row2Images = [
+  "/images/projects/certerus_lp.jpg",
+  "/images/projects/rooftop_geovana.jpg",
+  "/images/projects/inmotrev_real_estate.jpg",
+  "/images/projects/boom_smiles.jpg",
+  "/images/projects/dds_marketing_recruitment.jpg",
+  "/images/projects/nearby.jpg",
+  "/images/projects/daytona_cup.jpg",
+  "/images/projects/xponent_marketing.jpg",
+];
+
+const row3Images = [
+  "/images/projects/weatherly.jpg",
+  "/images/projects/plaforama.jpg",
+  "/images/projects/connection_dentistry.jpg",
+  "/images/projects/securlife.jpg",
+  "/images/projects/certerus_app.jpg",
+  "/images/projects/alfonso_emanuel.jpg",
+  "/images/projects/sonrisa_dental_specialists.jpg",
+  "/images/projects/aox_billing_solutions.jpg",
+];
 
 function repeat(arr: string[], times = 5) {
   return Array.from({ length: times }, () => arr).flat();
@@ -35,13 +54,14 @@ function ImageStrip({
       {images.map((src, i) => (
         <div
           key={i}
-          className="flex-shrink-0 w-72 h-44 rounded-2xl overflow-hidden bg-neutral-800"
+          className="relative flex-shrink-0 w-72 h-44 rounded-2xl overflow-hidden bg-neutral-800"
         >
-          <img
+          <Image
             src={src}
             alt=""
-            loading="lazy"
-            className="w-full h-full object-cover opacity-90"
+            fill
+            sizes="288px"
+            className="object-cover"
           />
         </div>
       ))}
@@ -66,9 +86,9 @@ export function About5() {
   const x2 = useSpring(rawX2, springConfig);
   const x3 = useSpring(rawX3, springConfig);
 
-  const imagesRow1 = repeat(row1, 5);
-  const imagesRow2 = repeat(row2, 5);
-  const imagesRow3 = repeat(row3, 5);
+  const imagesRow1 = repeat(row1Images, 5);
+  const imagesRow2 = repeat(row2Images, 5);
+  const imagesRow3 = repeat(row3Images, 5);
 
   return (
     <section
