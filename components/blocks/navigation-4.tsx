@@ -8,7 +8,7 @@ import {
   useTransform,
   AnimatePresence,
 } from "motion/react";
-import { Home, Briefcase, User, Mail, Menu, X } from "lucide-react";
+import { Home, Briefcase, FolderOpen, User, Mail, Menu, X } from "lucide-react";
 
 export function Navigation4() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -23,10 +23,11 @@ export function Navigation4() {
   }, []);
 
   const navItems = [
-    { id: "home", icon: Home, label: "Home", href: "#home" },
-    { id: "works", icon: Briefcase, label: "Works", href: "#projects" },
-    { id: "profile", icon: User, label: "About", href: "#about" },
-    { id: "contact", icon: Mail, label: "Contact", href: "#contact" },
+    { id: "home",       icon: Home,        label: "Home",       href: "#home" },
+    { id: "experience", icon: Briefcase,   label: "Experience", href: "#works" },
+    { id: "projects",   icon: FolderOpen,  label: "Projects",   href: "#projects" },
+    { id: "about",      icon: User,        label: "About",      href: "#about" },
+    { id: "contact",    icon: Mail,        label: "Contact",    href: "#contact" },
   ];
 
   return (
