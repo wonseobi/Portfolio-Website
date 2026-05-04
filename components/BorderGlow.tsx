@@ -52,15 +52,15 @@ interface BorderGlowProps {
 export function BorderGlow({
   children,
   className = "",
-  edgeSensitivity = 30,
-  glowColor = "0 0 90",
+  edgeSensitivity = 18,
+  glowColor = "0 0 92",
   backgroundColor = "#171717",
   borderRadius = 16,
-  glowRadius = 40,
+  glowRadius = 55,
   glowIntensity = 1.0,
-  coneSpread = 25,
-  colors = ["#ffffff", "#d4d4d4", "#737373"],
-  fillOpacity = 0.4,
+  coneSpread = 32,
+  colors = ["#ffffff", "#e5e5e5", "#a3a3a3"],
+  fillOpacity = 0.55,
 }: BorderGlowProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 

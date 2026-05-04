@@ -12,7 +12,7 @@
   isolation: isolate;
   transform: translate3d(0, 0, 0.01px);
   display: grid;
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 18%);
   background: var(--card-bg, #171717);
   overflow: visible;
 }
@@ -24,7 +24,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  transition: opacity 0.25s ease-out;
+  transition: opacity 0.18s ease-out;
   z-index: -1;
 }
 
@@ -32,7 +32,7 @@
 .border-glow-card:not(:hover)::after,
 .border-glow-card:not(:hover) > .edge-light {
   opacity: 0;
-  transition: opacity 0.75s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .border-glow-card::before {
