@@ -609,21 +609,41 @@ export function Showcase4() {
           </AnimatePresence>
         </div>
 
-        {/* View More button */}
-        {hasMore && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex justify-center mt-10"
-          >
-            <button
-              onClick={() => setShowAll(true)}
-              className="px-8 py-3 rounded-full border border-neutral-700 text-sm text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors cursor-pointer tracking-[0.1em] uppercase font-medium"
+        {/* View More / Show Less buttons */}
+        <AnimatePresence mode="wait">
+          {hasMore && (
+            <motion.div
+              key="view-all"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex justify-center mt-10"
             >
-              View all projects
-            </button>
-          </motion.div>
-        )}
+              <button
+                onClick={() => setShowAll(true)}
+                className="px-8 py-3 rounded-full border border-neutral-700 text-sm text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors cursor-pointer tracking-[0.1em] uppercase font-medium"
+              >
+                View all projects
+              </button>
+            </motion.div>
+          )}
+          {showAll && (
+            <motion.div
+              key="show-less"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex justify-center mt-10"
+            >
+              <button
+                onClick={() => setShowAll(false)}
+                className="px-8 py-3 rounded-full border border-neutral-700 text-sm text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors cursor-pointer tracking-[0.1em] uppercase font-medium"
+              >
+                Show less
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Modal */}
