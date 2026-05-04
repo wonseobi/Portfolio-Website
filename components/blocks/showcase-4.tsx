@@ -238,7 +238,7 @@ const projects: Project[] = [
   },
   {
     id: 28,
-    title: "Injury Counsel Florida — LP",
+    title: "Injury Counsel Florida 2",
     description: "High-conversion legal landing experience engineered for aggressive lead acquisition campaigns in Florida. Responsive UX, fast load performance, and optimized user flows.",
     year: "2024",
     tags: ["Web", "UI/UX"],
