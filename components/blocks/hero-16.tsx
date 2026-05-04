@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import TextType from "@/components/TextType";
 
 export function Hero16() {
   return (
@@ -13,7 +14,13 @@ export function Hero16() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-white text-sm font-medium tracking-[0.15em] uppercase"
         >
-          Won Lee
+          <TextType
+            text="Won Lee"
+            loop={false}
+            showCursor={false}
+            typingSpeed={90}
+            initialDelay={200}
+          />
         </motion.div>
 
         {/* Middle — Large Headline */}
@@ -22,12 +29,15 @@ export function Hero16() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium text-neutral-900 dark:text-white leading-[1.05] tracking-[-0.02em] max-w-4xl"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium text-white leading-[1.05] tracking-[-0.02em] max-w-4xl"
           >
-            Building products
-            <br />
-            people love
-            <br className="hidden sm:block" /> to use.
+            <TextType
+              text="Building products people love to use."
+              loop={false}
+              showCursor={true}
+              typingSpeed={45}
+              initialDelay={700}
+            />
           </motion.h1>
         </div>
 

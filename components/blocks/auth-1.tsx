@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, CheckCircle } from "lucide-react";
+import TextType from "@/components/TextType";
 
 const marqueeTestimonials = [
   {
@@ -76,8 +77,14 @@ export function Auth1() {
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 mb-4">
               Contact
             </p>
-            <h1 className="text-3xl sm:text-4xl font-semibold text-white mb-3 tracking-tight leading-tight">
-              Let&apos;s work together.
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 tracking-tight leading-[1.05]">
+              <TextType
+                text="Let's work together."
+                loop={false}
+                showCursor={true}
+                startOnVisible={true}
+                typingSpeed={50}
+              />
             </h1>
             <p className="text-base text-neutral-400 leading-relaxed">
               Have a project in mind or just want to say hi? Drop me a message and I&apos;ll get back to you.

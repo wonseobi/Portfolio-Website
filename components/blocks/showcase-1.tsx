@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import TextType from "@/components/TextType";
 
 interface Job {
   id: number;
@@ -86,10 +87,21 @@ export function Showcase1() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 mb-12"
+          className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 mb-6"
         >
           Experience
         </motion.p>
+
+        {/* Section title */}
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-14">
+          <TextType
+            text="My Professional Journey So Far."
+            loop={false}
+            showCursor={true}
+            startOnVisible={true}
+            typingSpeed={40}
+          />
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Left — Job list */}

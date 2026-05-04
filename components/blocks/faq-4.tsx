@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import TextType from "@/components/TextType";
 
 const faqs = [
   {
@@ -49,15 +50,15 @@ export function Faq4() {
             >
               FAQ
             </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl font-medium text-neutral-900 dark:text-white tracking-tight leading-[1.05]"
-            >
-              Questions I get asked a lot.
-            </motion.h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
+              <TextType
+                text="Questions I get asked a lot."
+                loop={false}
+                showCursor={true}
+                startOnVisible={true}
+                typingSpeed={40}
+              />
+            </h2>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

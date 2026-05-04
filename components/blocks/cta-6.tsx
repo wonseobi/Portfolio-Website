@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import TextType from "@/components/TextType";
 
 type Cell = { r: number; c: number; icon: React.ReactNode };
 
@@ -232,8 +233,14 @@ export function Cta6() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
         >
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-tight leading-tight max-w-[22ch]">
-            Let&apos;s build something great together.
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-[1.05] max-w-[22ch]">
+            <TextType
+              text="Let's build something great together."
+              loop={false}
+              showCursor={true}
+              startOnVisible={true}
+              typingSpeed={40}
+            />
           </h2>
           <div className="mt-6 flex items-center gap-3 flex-wrap justify-center">
             <motion.a
