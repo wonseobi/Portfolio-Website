@@ -374,6 +374,14 @@ const projects: Project[] = [
     tags: ["Web", "UI/UX"],
     href: "#",
   },
+  {
+    id: 45,
+    title: "Alfonso Emanuel Portfolio",
+    description: "Visually immersive portfolio experience for a digital artist and animation specialist. Modern UI/UX, fluid interactions, and cinematic presentation systems highlighting creative work. Responsive frontend architecture optimized for performance, storytelling, and visual impact.",
+    year: "2024",
+    tags: ["Web", "UI/UX"],
+    href: "#",
+  },
 ];
 
 export function Showcase4() {
