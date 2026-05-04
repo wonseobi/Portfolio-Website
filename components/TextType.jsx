@@ -15,6 +15,7 @@ const TextType = ({
   className = '',
   showCursor = true,
   hideCursorWhileTyping = false,
+  hideCursorOnComplete = false,
   cursorCharacter = '|',
   cursorClassName = '',
   cursorBlinkDuration = 0.5,
@@ -30,6 +31,7 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
+  const [typingComplete, setTypingComplete] = useState(false);
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -114,7 +116,10 @@ const TextType = ({
             variableSpeed ? getRandomSpeed() : typingSpeed
           );
         } else if (textArray.length >= 1) {
-          if (!loop && currentTextIndex === textArray.length - 1) return;
+          if (!loop && currentTextIndex === textArray.length - 1) {
+            if (hideCursorOnComplete) setTypingComplete(true);
+            return;
+          }
           timeout = setTimeout(() => {
             setIsDeleting(true);
           }, pauseDuration);
@@ -148,7 +153,8 @@ const TextType = ({
   ]);
 
   const shouldHideCursor =
-    hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+    typingComplete ||
+    (hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting));
 
   return createElement(
     Component,

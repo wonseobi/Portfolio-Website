@@ -10,6 +10,7 @@ declare module "@/components/TextType" {
     className?: string;
     showCursor?: boolean;
     hideCursorWhileTyping?: boolean;
+    hideCursorOnComplete?: boolean;
     cursorCharacter?: string;
     cursorClassName?: string;
     cursorBlinkDuration?: number;

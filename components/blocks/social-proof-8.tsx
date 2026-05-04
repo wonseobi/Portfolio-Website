@@ -60,6 +60,7 @@ export function SocialProof8() {
           text="What people say about working with me."
           loop={false}
           showCursor={true}
+          hideCursorOnComplete={true}
           startOnVisible={true}
           typingSpeed={38}
         />

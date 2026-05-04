@@ -238,6 +238,7 @@ export function Cta6() {
               text="Let's build something great together."
               loop={false}
               showCursor={true}
+              hideCursorOnComplete={true}
               startOnVisible={true}
               typingSpeed={40}
             />

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 import { BorderGlow } from "@/components/BorderGlow";
 import Image from "next/image";
+import TextType from "@/components/TextType";
 
 const filters = ["All", "Web", "Mobile", "UI/UX"] as const;
 type Filter = (typeof filters)[number];
@@ -501,7 +502,14 @@ export function Showcase4() {
             Projects · 2023–2026 · {projects.length} Projects
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-3xl">
-            Things I have built that <br />I'm proud of.
+            <TextType
+              text="Things I have built that I'm proud of."
+              loop={false}
+              showCursor={true}
+              hideCursorOnComplete={true}
+              startOnVisible={true}
+              typingSpeed={40}
+            />
           </h2>
         </motion.div>
 

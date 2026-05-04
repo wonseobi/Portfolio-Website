@@ -82,6 +82,7 @@ export function Auth1() {
                 text="Let's work together."
                 loop={false}
                 showCursor={true}
+                hideCursorOnComplete={true}
                 startOnVisible={true}
                 typingSpeed={50}
               />

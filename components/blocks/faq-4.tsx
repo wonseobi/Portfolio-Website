@@ -55,6 +55,7 @@ export function Faq4() {
                 text="Questions I get asked a lot."
                 loop={false}
                 showCursor={true}
+                hideCursorOnComplete={true}
                 startOnVisible={true}
                 typingSpeed={40}
               />

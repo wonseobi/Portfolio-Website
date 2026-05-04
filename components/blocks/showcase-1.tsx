@@ -98,6 +98,7 @@ export function Showcase1() {
             text="My Professional Journey So Far."
             loop={false}
             showCursor={true}
+            hideCursorOnComplete={true}
             startOnVisible={true}
             typingSpeed={40}
           />
