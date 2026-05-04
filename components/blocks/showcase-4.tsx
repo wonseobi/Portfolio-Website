@@ -375,6 +375,14 @@ const projects: Project[] = [
     href: "#",
   },
   {
+    id: 46,
+    title: "DDS Marketing Recruitment",
+    description: "Official recruitment platform for DDS Marketing focused on attracting top-tier talent through modern branding and streamlined candidate experiences. Conversion-focused user flows designed to support hiring growth and improve applicant engagement.",
+    year: "2025",
+    tags: ["Web"],
+    href: "#",
+  },
+  {
     id: 45,
     title: "Alfonso Emanuel Portfolio",
     description: "Visually immersive portfolio experience for a digital artist and animation specialist. Modern UI/UX, fluid interactions, and cinematic presentation systems highlighting creative work. Responsive frontend architecture optimized for performance, storytelling, and visual impact.",
