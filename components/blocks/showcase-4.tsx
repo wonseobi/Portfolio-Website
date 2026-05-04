@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { ArrowUpRight, X } from "lucide-react";
+import { BorderGlow } from "@/components/BorderGlow";
 
 const filters = ["All", "Web", "Mobile", "UI/UX"] as const;
 type Filter = (typeof filters)[number];
@@ -192,7 +193,7 @@ export function Showcase4() {
                 onClick={() => setSelected(p)}
                 className="group cursor-pointer flex flex-col gap-3"
               >
-                <div className="relative aspect-video rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 group-hover:border-neutral-600 transition-colors duration-300">
+                <BorderGlow className="aspect-video w-full" borderRadius={16}>
                   <motion.img
                     src={p.image}
                     alt={p.title}
@@ -209,7 +210,7 @@ export function Showcase4() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </BorderGlow>
                 <div className="flex items-baseline justify-between px-1">
                   <h3 className="text-sm font-semibold text-white group-hover:text-neutral-300 transition-colors truncate">
                     {p.title}
