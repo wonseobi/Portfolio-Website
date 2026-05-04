@@ -15,8 +15,9 @@ interface Project {
   description: string;
   year: string;
   tags: Filter[];
-  href: string;
+  href?: string;
   image?: string;
+  featured?: boolean;
 }
 
 const projects: Project[] = [
@@ -178,10 +179,11 @@ const projects: Project[] = [
   },
   {
     id: 19,
-    title: "Injury Counsel Florida",
+    title: "Injury Counsel of Florida",
     description: "Legal services platform engineered around authority, accessibility, and lead generation for the Florida market. Responsive frontend systems optimized for high-conversion user journeys.",
     year: "2024",
     tags: ["Web"],
+    featured: true,
     href: "https://injurycounselfl.com/",
     image: "/images/projects/injury_counsel_fl.jpg",
   },
@@ -254,7 +256,7 @@ const projects: Project[] = [
   },
   {
     id: 28,
-    title: "Injury Counsel Florida 2",
+    title: "Injury Counsel of Florida LP",
     description: "High-conversion legal landing experience engineered for aggressive lead acquisition campaigns in Florida. Responsive UX, fast load performance, and optimized user flows.",
     year: "2024",
     tags: ["Web", "UI/UX"],
@@ -267,6 +269,7 @@ const projects: Project[] = [
     description: "Digital presence for an internal AI-focused initiative combining modern branding with scalable frontend systems. Sleek, future-oriented experience focused on innovation and AI-driven marketing solutions.",
     year: "2025",
     tags: ["Web", "UI/UX"],
+    featured: true,
     href: "https://itspraxis.ai/",
     image: "/images/projects/praxis_ai.jpg",
   },
@@ -345,6 +348,7 @@ const projects: Project[] = [
     description: "Primary digital acquisition platform focused on branding, service presentation, and lead conversion. Scalable UI systems optimized for performance and growth.",
     year: "2023",
     tags: ["Web", "UI/UX"],
+    featured: true,
     href: "https://www.certerus.com/aula-empresarial/",
     image: "/images/projects/certerus_lp.webp",
   },
@@ -389,6 +393,7 @@ const projects: Project[] = [
     description: "Modern crypto investing platform focused on premium branding, market credibility, and high-performance frontend systems. Responsive user experiences and sleek UI interactions designed to communicate trust and innovation.",
     year: "2026",
     tags: ["Web", "UI/UX"],
+    featured: true,
     href: "https://blocquant.com/",
     image: "/images/projects/blocquant.jpg",
   },
@@ -407,6 +412,7 @@ const projects: Project[] = [
     description: "Official recruitment platform for DDS Marketing focused on attracting top-tier talent through modern branding and streamlined candidate experiences. Conversion-focused user flows designed to support hiring growth and improve applicant engagement.",
     year: "2026",
     tags: ["Web"],
+    featured: true,
     href: "https://ddsmarketing.io/recruitment/",
     image: "/images/projects/dds_marketing_recruitment.jpg",
   },
@@ -421,18 +427,41 @@ const projects: Project[] = [
   },
 ];
 
-const INITIAL_LIMIT = 16;
+// Curated order for default "All" view (first 4 rows / 16 cards)
+// IDs: BLOCQUANT=43, DDS Recruitment=46, Praxis AI=29, Certerus=38,
+//      Xponent=2, Injury Counsel FL=19, Royal Smiles=17, Daytona Liberty=1,
+//      Orcutt Hills=12, Sonrisa=24, Synergy=44, AOX=6,
+//      Rooftop Geovana=30, Mentor E-Learning=40, Certerus App=39, Connection Dentistry=15
+const DEFAULT_ORDER_IDS = [43, 46, 29, 38, 2, 19, 17, 1, 12, 24, 44, 6, 30, 40, 39, 15];
+
+const projectMap = new Map(projects.map((p) => [p.id, p]));
 
 export function Showcase4() {
   const [active, setActive] = useState<Filter>("All");
   const [selected, setSelected] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  const visible =
+  const filtered =
     active === "All" ? projects : projects.filter((p) => p.tags.includes(active));
 
-  const visibleProjects = showAll ? visible : visible.slice(0, INITIAL_LIMIT);
-  const hasMore = visible.length > INITIAL_LIMIT && !showAll;
+  const sortedByYear = [...filtered].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
+  let visibleProjects: Project[];
+  let hasMore: boolean;
+
+  if (showAll) {
+    // View all: newest first
+    visibleProjects = sortedByYear;
+    hasMore = false;
+  } else if (active === "All") {
+    // Default: curated 16-card order
+    visibleProjects = DEFAULT_ORDER_IDS.map((id) => projectMap.get(id)!).filter(Boolean);
+    hasMore = true; // always show "View All" since 46 total
+  } else {
+    // Filtered: sort by year desc, slice to 16
+    visibleProjects = sortedByYear.slice(0, 16);
+    hasMore = filtered.length > 16 && !showAll;
+  }
 
   // Reset "show all" when filter changes
   useEffect(() => {
@@ -469,10 +498,10 @@ export function Showcase4() {
           className="flex flex-col gap-6 mb-10 sm:mb-14"
         >
           <span className="text-xs tracking-[0.2em] uppercase text-neutral-500 font-medium">
-            Projects · 2023–2026 · {projects.length} total
+            Projects · 2023–2026 · {projects.length} Projects
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-3xl">
-            Things I've built that I'm proud of.
+            Things I have built that <br />I'm proud of.
           </h2>
         </motion.div>
 
@@ -510,7 +539,7 @@ export function Showcase4() {
             ))}
           </div>
           <span className="text-xs tracking-[0.15em] uppercase text-neutral-500 sm:ml-auto">
-            {visible.length} {visible.length === 1 ? "project" : "projects"}
+            {filtered.length} {filtered.length === 1 ? "project" : "projects"}
           </span>
         </motion.div>
 
@@ -541,6 +570,14 @@ export function Showcase4() {
                       sizes="(max-width: 1024px) 50vw, 25vw"
                       className="object-cover opacity-95 group-hover:scale-105 transition-all duration-500"
                     />
+                  )}
+                  {/* Featured badge */}
+                  {p.featured && (
+                    <div className="absolute top-2 right-2 z-10">
+                      <span className="px-2 py-0.5 rounded-full bg-yellow-400/90 backdrop-blur-sm text-[9px] tracking-[0.15em] uppercase text-yellow-900 font-bold">
+                        Featured
+                      </span>
+                    </div>
                   )}
                   <div className="absolute bottom-2 left-2 flex flex-wrap gap-1 z-10">
                     {p.tags.map((t) => (
