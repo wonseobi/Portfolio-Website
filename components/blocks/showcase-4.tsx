@@ -387,7 +387,7 @@ const projects: Project[] = [
     id: 43,
     title: "BLOCQUANT",
     description: "Modern crypto investing platform focused on premium branding, market credibility, and high-performance frontend systems. Responsive user experiences and sleek UI interactions designed to communicate trust and innovation.",
-    year: "2024",
+    year: "2026",
     tags: ["Web", "UI/UX"],
     href: "https://blocquant.com/",
     image: "/images/projects/blocquant.jpg",
@@ -405,7 +405,7 @@ const projects: Project[] = [
     id: 46,
     title: "DDS Marketing Recruitment",
     description: "Official recruitment platform for DDS Marketing focused on attracting top-tier talent through modern branding and streamlined candidate experiences. Conversion-focused user flows designed to support hiring growth and improve applicant engagement.",
-    year: "2025",
+    year: "2026",
     tags: ["Web"],
     href: "https://ddsmarketing.io/recruitment/",
     image: "/images/projects/dds_marketing_recruitment.jpg",
@@ -469,7 +469,7 @@ export function Showcase4() {
           className="flex flex-col gap-6 mb-10 sm:mb-14"
         >
           <span className="text-xs tracking-[0.2em] uppercase text-neutral-500 font-medium">
-            Projects · 2023–2025 · {projects.length} total
+            Projects · 2023–2026 · {projects.length} total
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-3xl">
             Things I've built that I'm proud of.
@@ -575,7 +575,7 @@ export function Showcase4() {
               onClick={() => setShowAll(true)}
               className="px-8 py-3 rounded-full border border-neutral-700 text-sm text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors cursor-pointer tracking-[0.1em] uppercase font-medium"
             >
-              View all {visible.length} projects
+              View all projects
             </button>
           </motion.div>
         )}
