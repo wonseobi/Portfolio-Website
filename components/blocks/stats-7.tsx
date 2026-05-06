@@ -9,9 +9,9 @@ const skills = [
   { label: "React Native", percentage: 90,   color: "bg-teal-500" },
   { label: "TypeScript",   percentage: 87.5, color: "bg-blue-400" },
   { label: "Figma",        percentage: 85,   color: "bg-pink-500" },
+  { label: "AWS",          percentage: 85,   color: "bg-orange-400" },
   { label: "Node.js",      percentage: 78,   color: "bg-green-500" },
   { label: "PHP",          percentage: 72,   color: "bg-indigo-500" },
-  { label: "Next.js",      percentage: 80,   color: "bg-neutral-100" },
 ];
 
 export function Stats7() {
