@@ -576,7 +576,7 @@ export function Showcase4() {
                       alt={p.title}
                       fill
                       sizes="(max-width: 1024px) 50vw, 25vw"
-                      className="object-cover opacity-95 group-hover:scale-105 transition-all duration-500"
+                      className="object-cover object-top opacity-95 group-hover:scale-105 transition-all duration-500"
                     />
                   )}
                   {/* Featured badge */}
