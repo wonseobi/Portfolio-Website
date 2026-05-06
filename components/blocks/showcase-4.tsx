@@ -502,14 +502,8 @@ export function Showcase4() {
             Projects · 2023–2026 · {projects.length} Projects
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-3xl">
-            <TextType
-              text="Things I have built that I'm proud of."
-              loop={false}
-              showCursor={true}
-              hideCursorOnComplete={true}
-              startOnVisible={true}
-              typingSpeed={40}
-            />
+            Things I&apos;ve built that
+            <br />I&apos;m proud of.
           </h2>
         </motion.div>
 
