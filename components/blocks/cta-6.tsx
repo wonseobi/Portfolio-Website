@@ -35,16 +35,16 @@ const FigmaIcon = () => (
 );
 
 const logoCells: Cell[] = [
-  { r: 0, c: 1, icon: <ReactIcon /> },
-  { r: 0, c: 5, icon: <Img src="/icons/typescript.png" alt="TypeScript" /> },
-  { r: 0, c: 8, icon: <Img src="/icons/js.png" alt="JavaScript" /> },
-  { r: 1, c: 6, icon: <TailwindIcon /> },
-  { r: 1, c: 9, icon: <FigmaIcon /> },
-  { r: 2, c: 1, icon: <Img src="/icons/github.png" alt="GitHub" /> },
-  { r: 2, c: 9, icon: <Img src="/icons/database.png" alt="Database" /> },
-  { r: 3, c: 10, icon: <Img src="/icons/docker.png" alt="Docker" /> },
-  { r: 4, c: 5, icon: <Img src="/icons/python.png" alt="Python" /> },
-  { r: 4, c: 8, icon: <Img src="/icons/cloud.png" alt="AWS" /> },
+  { r: 0, c: 1,  icon: <ReactIcon /> },
+  { r: 0, c: 9,  icon: <Img src="/icons/typescript.png" alt="TypeScript" /> },
+  { r: 1, c: 2,  icon: <Img src="/icons/js.png" alt="JavaScript" /> },
+  { r: 1, c: 8,  icon: <TailwindIcon /> },
+  { r: 2, c: 0,  icon: <Img src="/icons/github.png" alt="GitHub" /> },
+  { r: 2, c: 10, icon: <FigmaIcon /> },
+  { r: 3, c: 1,  icon: <Img src="/icons/database.png" alt="Database" /> },
+  { r: 3, c: 9,  icon: <Img src="/icons/docker.png" alt="Docker" /> },
+  { r: 4, c: 4,  icon: <Img src="/icons/python.png" alt="Python" /> },
+  { r: 5, c: 6,  icon: <Img src="/icons/cloud.png" alt="AWS" /> },
 ];
 
 const COLS = 11;
