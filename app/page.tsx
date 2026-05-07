@@ -23,7 +23,7 @@ export default function Home() {
         <Showcase1 />
         <Showcase4 />
         <Stats7 />
-        <SocialProof8 />
+        {/* <SocialProof8 /> */}
         <About5 />
         <Cta6 />
         <Faq4 />
