@@ -74,7 +74,7 @@ const logoCells: Cell[] = [
   // Row 0 — top, spread across full width
   { r: 0, c: 1,  icon: <ReactIcon /> },
   { r: 0, c: 5,  icon: <Img src="/icons/typescript.png" alt="TypeScript" /> },
-  { r: 0, c: 9,  icon: <NextIcon /> },
+  { r: 0, c: 9,  icon: <Img src="/icons/js.png" alt="JavaScript" /> },
   // Row 1 — left, center-right, far right
   { r: 1, c: 0,  icon: <Img src="/icons/github.png" alt="GitHub" /> },
   { r: 1, c: 6,  icon: <TailwindIcon /> },

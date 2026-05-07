@@ -42,9 +42,7 @@ const nodeItems: NodeItem[] = [
   },
   {
     content: (
-      <div className="flex items-center justify-center w-8 h-7 rounded bg-blue-600/80">
-        <span className="text-white text-[10px] font-bold tracking-tight">TS</span>
-      </div>
+      <span className="text-neutral-400 text-[13px] font-bold font-mono tracking-tight">TS</span>
     ),
   },
   {
