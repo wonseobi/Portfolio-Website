@@ -8,7 +8,7 @@ import {
   useTransform,
   AnimatePresence,
 } from "motion/react";
-import { Home, Briefcase, User, Mail, Menu, X } from "lucide-react";
+import { Home, Briefcase, FolderOpen, User, Mail, Menu, X } from "lucide-react";
 
 export function Navigation4() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -23,10 +23,11 @@ export function Navigation4() {
   }, []);
 
   const navItems = [
-    { id: "home", icon: Home, label: "Home", href: "#home" },
-    { id: "works", icon: Briefcase, label: "Works", href: "#projects" },
-    { id: "profile", icon: User, label: "About", href: "#about" },
-    { id: "contact", icon: Mail, label: "Contact", href: "#contact" },
+    { id: "home",       icon: Home,        label: "Home",       href: "#home" },
+    { id: "experience", icon: Briefcase,   label: "Experience", href: "#works" },
+    { id: "projects",   icon: FolderOpen,  label: "Projects",   href: "#projects" },
+    { id: "about",      icon: User,        label: "About",      href: "#about" },
+    { id: "contact",    icon: Mail,        label: "Contact",    href: "#contact" },
   ];
 
   return (
@@ -35,10 +36,10 @@ export function Navigation4() {
         <>
           {/* Mobile Navigation - Top Brand */}
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-4"
           >
             <div className="flex items-center justify-between">
@@ -68,10 +69,10 @@ export function Navigation4() {
           <AnimatePresence>
             {mobileMenuOpen && (
               <motion.nav
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 100 }}
-                transition={{ duration: 0.15, ease: [0.4, 0, 0.2, 1] }}
+                exit={{ opacity: 0, y: 16 }}
+                transition={{ duration: 0.2 }}
                 className="md:hidden fixed bottom-3 left-0 right-0 z-50 px-4 pb-6"
               >
                 <motion.div className="flex items-center justify-center gap-4 px-6 py-4 rounded-3xl bg-white/80 backdrop-blur-2xl dark:bg-neutral-900/80 border border-neutral-200/50 dark:border-neutral-800/50 shadow-xl mx-auto w-fit">
@@ -85,22 +86,17 @@ export function Navigation4() {
 
           {/* Side Navigation - Desktop Only */}
           <motion.nav
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             className="hidden md:flex fixed left-0 top-0 h-screen w-24 flex-col items-center py-8 z-50"
           >
             {/* Logo / Brand */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.2, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="mb-12 text-left"
-            >
+            <div className="mb-12 text-left">
               <p className="text-sm font-bold text-white leading-tight">Won</p>
               <p className="text-sm font-bold text-white leading-tight">Lee</p>
-            </motion.div>
+            </div>
 
             {/* Nav Items */}
             <motion.div
@@ -159,9 +155,6 @@ function NavItem({ item, index, mouseY, hoveredItem, setHoveredItem }: NavItemPr
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.15, delay: 0.15 + index * 0.05, ease: [0.4, 0, 0.2, 1] }}
       className="relative flex items-center justify-center"
       style={{ width: size, height: size }}
       onMouseEnter={() => setHoveredItem(item.id)}
@@ -177,10 +170,10 @@ function NavItem({ item, index, mouseY, hoveredItem, setHoveredItem }: NavItemPr
       <AnimatePresence>
         {hoveredItem === item.id && (
           <motion.div
-            initial={{ opacity: 0, x: -10 }}
+            initial={{ opacity: 0, x: -6 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            exit={{ opacity: 0, x: -6 }}
+            transition={{ duration: 0.15 }}
             className="absolute left-full ml-4 top-1/2 -translate-y-1/2 whitespace-nowrap px-3 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm font-medium shadow-lg"
           >
             {item.label}
@@ -205,9 +198,9 @@ function MobileNavItem({ item, index }: MobileNavItemProps) {
   const Icon = item.icon;
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.15, delay: 0.15 + index * 0.05, ease: [0.4, 0, 0.2, 1] }}
+      transition={{ duration: 0.15, delay: index * 0.04 }}
       className="relative flex items-center justify-center w-12 h-12"
     >
       <a

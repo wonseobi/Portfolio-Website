@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import TextType from "@/components/TextType";
 
 const testimonials = [
   {
@@ -54,15 +55,16 @@ export function SocialProof8() {
       >
         Testimonials
       </motion.p>
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, delay: 0.08 }}
-        className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-2xl mb-14"
-      >
-        What people say about working with me.
-      </motion.h2>
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white max-w-2xl mb-14">
+        <TextType
+          text="What people say about working with me."
+          loop={false}
+          showCursor={true}
+          hideCursorOnComplete={true}
+          startOnVisible={true}
+          typingSpeed={38}
+        />
+      </h2>
       <div
         ref={containerRef}
         className="w-full max-w-[1400px] relative cursor-pointer"

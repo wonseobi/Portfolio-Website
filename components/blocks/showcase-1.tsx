@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import TextType from "@/components/TextType";
 
 interface Job {
   id: number;
@@ -86,10 +87,22 @@ export function Showcase1() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 mb-12"
+          className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 mb-6"
         >
           Experience
         </motion.p>
+
+        {/* Section title */}
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-14">
+          <TextType
+            text="My Professional Journey So Far."
+            loop={false}
+            showCursor={true}
+            hideCursorOnComplete={true}
+            startOnVisible={true}
+            typingSpeed={40}
+          />
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Left — Job list */}
@@ -161,30 +174,30 @@ export function Showcase1() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeJob.id}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                 className="w-full"
               >
                 {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-white mb-1">
+                <div className="mb-8">
+                  <h3 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
                     {activeJob.role}
                   </h3>
-                  <p className="text-sm text-neutral-400">
+                  <p className="text-base text-neutral-400">
                     {activeJob.company} · {activeJob.location}
                   </p>
-                  <p className="text-xs text-neutral-500 mt-1 tracking-wide">
+                  <p className="text-sm text-neutral-500 mt-1 tracking-wide">
                     {activeJob.period}
                   </p>
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {activeJob.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-neutral-300 leading-relaxed">
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-neutral-500 shrink-0" />
+                    <li key={i} className="flex gap-4 text-base text-neutral-300 leading-relaxed">
+                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-neutral-500 shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -195,7 +208,7 @@ export function Showcase1() {
                   {activeJob.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`text-xs px-3 py-1 rounded-full border ${tagColors[tag] ?? "border-neutral-700 bg-transparent text-neutral-400"}`}
+                      className={`text-sm px-4 py-1.5 rounded-full border ${tagColors[tag] ?? "border-neutral-700 bg-transparent text-neutral-400"}`}
                     >
                       {tag}
                     </span>

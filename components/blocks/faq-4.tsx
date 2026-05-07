@@ -7,11 +7,11 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Are you available for freelance or contract work?",
-    a: "Yes — I take on select freelance and contract projects alongside my full-time work. If you have something interesting in mind, reach out and we can figure out if the timing and scope work.",
+    a: "Yes. I take on select freelance and contract projects alongside my full time work. If you have something interesting in mind, reach out and we can figure out if the timing and scope work.",
   },
   {
     q: "What does your typical process look like?",
-    a: "I start with a short discovery call to understand your goals, then move into wireframes or a technical spec depending on the project. From there it's iterative builds with regular check-ins — no black-box development.",
+    a: "I start with a short discovery call to understand your goals, then move into wireframes or a technical spec depending on the project. From there it's iterative builds with regular check ins, no black box development.",
   },
   {
     q: "What technologies do you work with?",
@@ -19,15 +19,15 @@ const faqs = [
   },
   {
     q: "How long does a typical project take?",
-    a: "A focused feature or landing page can ship in a week or two. A full product — design to deployment — usually runs 4–12 weeks depending on scope. I'll give you an honest estimate upfront.",
+    a: "A focused feature or landing page can ship in a week or two. A full product, design to deployment, usually runs 4 to 12 weeks depending on scope. I'll give you an honest estimate upfront.",
   },
   {
     q: "How do you handle revisions and feedback?",
-    a: "I build in feedback rounds at key milestones so nothing is a surprise at the end. For ongoing projects I use a simple async process — you drop comments, I address them in the next cycle.",
+    a: "I build in feedback rounds at key milestones so nothing is a surprise at the end. For ongoing projects I use a simple async process, you drop comments, I address them in the next cycle.",
   },
   {
     q: "Can you work with an existing team or codebase?",
-    a: "Absolutely. I've jumped into legacy codebases, collaborated with design and product teams, and contributed to open-source projects. I adapt to whatever workflow and tools your team already uses.",
+    a: "Absolutely. I've jumped into legacy codebases, collaborated with design and product teams, and contributed to open source projects. I adapt to whatever workflow and tools your team already uses.",
   },
 ];
 
@@ -49,15 +49,9 @@ export function Faq4() {
             >
               FAQ
             </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl font-medium text-neutral-900 dark:text-white tracking-tight leading-[1.05]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
               Questions I get asked a lot.
-            </motion.h2>
+            </h2>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -65,7 +59,9 @@ export function Faq4() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-sm"
             >
-              Answers to the most common questions. Still have something on your mind? I&apos;m a message away.
+              Common questions, honest answers.
+              <br />
+              Still wondering? I&apos;m a message away.
             </motion.p>
           </div>
 
