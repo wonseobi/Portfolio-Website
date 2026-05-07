@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle } from "lucide-react";
 import TextType from "@/components/TextType";
+import { useForm, ValidationError } from "@formspree/react";
 import CenterFlow from "@/components/react-bits/center-flow";
 import type { NodeItem } from "@/components/react-bits/center-flow";
 
@@ -69,15 +69,7 @@ const nodeItems: NodeItem[] = [
 ];
 
 export function Auth1() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const [state, handleSubmit] = useForm("mkoyzvvr");
 
   return (
     <section id="contact" className="min-h-screen w-full flex">
@@ -118,7 +110,7 @@ export function Auth1() {
 
           {/* Form / Success */}
           <AnimatePresence mode="wait">
-            {submitted ? (
+            {state.succeeded ? (
               <motion.div
                 key="success"
                 initial={{ opacity: 0, y: 12 }}
@@ -132,12 +124,6 @@ export function Auth1() {
                 <p className="text-neutral-400 text-base leading-relaxed">
                   Thanks for reaching out. I&apos;ll get back to you as soon as possible.
                 </p>
-                <button
-                  onClick={() => { setSubmitted(false); setName(""); setEmail(""); setMessage(""); }}
-                  className="mt-2 text-sm text-neutral-500 hover:text-white transition-colors"
-                >
-                  Send another message
-                </button>
               </motion.div>
             ) : (
               <motion.form
@@ -156,13 +142,13 @@ export function Auth1() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
                     placeholder="Your name"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-neutral-800 bg-neutral-900 text-white placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-600 focus:border-neutral-600 transition-all duration-200"
                   />
+                  <ValidationError field="name" prefix="Name" errors={state.errors} className="text-red-400 text-xs mt-1" />
                 </div>
 
                 {/* Email */}
@@ -172,13 +158,13 @@ export function Auth1() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-neutral-800 bg-neutral-900 text-white placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-600 focus:border-neutral-600 transition-all duration-200"
                   />
+                  <ValidationError field="email" prefix="Email" errors={state.errors} className="text-red-400 text-xs mt-1" />
                 </div>
 
                 {/* Message */}
@@ -188,20 +174,21 @@ export function Auth1() {
                   </label>
                   <textarea
                     id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    name="message"
                     placeholder="Tell me about your project..."
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-neutral-800 bg-neutral-900 text-white placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-600 focus:border-neutral-600 transition-all duration-200 resize-none"
                   />
+                  <ValidationError field="message" prefix="Message" errors={state.errors} className="text-red-400 text-xs mt-1" />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 rounded-lg bg-white text-neutral-900 font-medium hover:bg-neutral-200 transition-colors duration-200 mb-8"
+                  disabled={state.submitting}
+                  className="w-full px-6 py-3 rounded-lg bg-white text-neutral-900 font-medium hover:bg-neutral-200 transition-colors duration-200 mb-8 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {state.submitting ? "Sending..." : "Send Message"}
                 </button>
               </motion.form>
             )}
