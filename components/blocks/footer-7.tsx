@@ -8,11 +8,6 @@ const GitHubIcon = () => (
   </svg>
 );
 
-const LinkedInIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.78 2.66 4.78 6.12V21h-4v-5.5c0-1.3-.02-3-1.83-3s-2.11 1.43-2.11 2.9V21h-4z" />
-  </svg>
-);
 
 const XIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -34,9 +29,7 @@ export function Footer7() {
           {/* Name */}
           <div className="flex items-start">
             <h3 className="text-2xl sm:text-3xl font-semibold text-white leading-[1.05] tracking-tight uppercase">
-              Won
-              <br />
-              Lee
+              Won Lee
             </h3>
           </div>
 
@@ -84,9 +77,6 @@ export function Footer7() {
             <div className="flex items-center gap-5">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">
                 <GitHubIcon />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">
-                <LinkedInIcon />
               </a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">
                 <XIcon />

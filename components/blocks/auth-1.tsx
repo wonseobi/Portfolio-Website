@@ -42,9 +42,9 @@ const nodeItems: NodeItem[] = [
   },
   {
     content: (
-      <svg viewBox="0 0 24 24" fill="#ffffff" className="w-6 h-6 opacity-50">
-        <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z"/>
-      </svg>
+      <div className="flex items-center justify-center w-8 h-7 rounded bg-blue-600/80">
+        <span className="text-white text-[10px] font-bold tracking-tight">TS</span>
+      </div>
     ),
   },
   {
@@ -231,9 +231,7 @@ export function Auth1() {
         <CenterFlow
           nodeItems={nodeItems}
           centerContent={
-            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-neutral-300">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <span className="text-neutral-300 font-mono font-bold text-2xl tracking-tighter select-none">&lt;/&gt;</span>
           }
           centerSize={110}
           nodeSize={56}
@@ -247,7 +245,7 @@ export function Auth1() {
           pulseDuration={4}
           pulseInterval={8}
           borderRadius={20}
-          nodeDistance={0.72}
+          nodeDistance={0.8}
         />
       </div>
     </section>
