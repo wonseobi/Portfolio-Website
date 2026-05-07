@@ -31,11 +31,8 @@ export function Footer7() {
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 lg:gap-8"
         >
-          {/* Logo + Name */}
-          <div className="flex items-start gap-5">
-            <div className="shrink-0 w-[72px] h-[72px] rounded-full bg-white flex items-center justify-center">
-              <span className="text-black font-bold text-lg tracking-tight">WL</span>
-            </div>
+          {/* Name */}
+          <div className="flex items-start">
             <h3 className="text-2xl sm:text-3xl font-semibold text-white leading-[1.05] tracking-tight uppercase">
               Won
               <br />
@@ -51,6 +48,7 @@ export function Footer7() {
             <ul className="flex flex-col gap-2 text-xl sm:text-2xl text-white">
               {[
                 { label: "Home", href: "#home" },
+                { label: "Experience", href: "#works" },
                 { label: "Projects", href: "#projects" },
                 { label: "About", href: "#about" },
                 { label: "Contact", href: "#contact" },
@@ -70,11 +68,11 @@ export function Footer7() {
               Who I Am
             </h4>
             <p className="text-xl sm:text-2xl text-white leading-tight">
-              A developer
+              Korean developer
               <br />
-              who builds things
+              working hard for
               <br />
-              people love.
+              the future.
             </p>
           </div>
 
