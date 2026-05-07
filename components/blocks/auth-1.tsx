@@ -72,7 +72,7 @@ export function Auth1() {
   const [state, handleSubmit] = useForm("mkoyzvvr");
 
   return (
-    <section id="contact" className="min-h-screen w-full flex">
+    <section id="contact" className="min-h-screen w-full flex" suppressHydrationWarning>
       {/* Left Column - Form */}
       <div className="w-full lg:w-1/2 flex flex-col justify-between p-6 sm:p-8 lg:p-14 bg-neutral-950">
         <motion.div
