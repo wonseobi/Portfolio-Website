@@ -359,6 +359,7 @@ const projects: Project[] = [
     description: "Cross-platform mobile applications for managing domains, websites, and digital services across iOS and Android. Scalable React Native architecture and seamless user experiences.",
     year: "2024",
     tags: ["Mobile"],
+    image: "/images/projects/certerus_app.jpg",
   },
   {
     id: 40,
@@ -376,6 +377,7 @@ const projects: Project[] = [
     year: "2024",
     tags: ["Mobile"],
     href: "https://www.figma.com/proto/Zir0qUqmCDvtwRIZcx379V/Streakify-App?node-id=22-423&starting-point-node-id=22%3A423&t=BXvZSAh8b5hGqLVc-1",
+    image: "/images/projects/streakify.jpg",
   },
   {
     id: 42,
@@ -384,6 +386,7 @@ const projects: Project[] = [
     year: "2023",
     tags: ["Mobile"],
     href: "https://www.figma.com/proto/PM560bWw6spRbLvQWWkckA/Weatherly-App?node-id=2002-211&starting-point-node-id=2002%3A211&t=K7tgylJugD9YIIbx-1",
+    image: "/images/projects/weatherly.jpg",
   },
   {
     id: 43,
