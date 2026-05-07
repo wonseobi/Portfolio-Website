@@ -108,7 +108,7 @@ const cellHash = (r: number, c: number) => {
 
 export function Cta6() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center py-16 sm:py-20 px-8 sm:px-12 lg:px-20 bg-transparent overflow-hidden">
+    <section className="w-full flex items-center justify-center py-20 sm:py-28 px-8 sm:px-12 lg:px-20 bg-transparent overflow-hidden">
       <div className="relative max-w-[1400px] mx-auto w-full">
         <div
           className="grid gap-1.5 sm:gap-2 md:gap-3 lg:gap-4"

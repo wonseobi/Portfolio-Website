@@ -23,8 +23,9 @@ export function Hero16() {
           />
         </motion.div>
 
-        {/* Middle — Large Headline */}
-        <div className="flex-1 flex items-start pt-12 sm:pt-16 md:pt-20">
+        {/* Content — centered vertically on mobile, spread on desktop */}
+        <div className="flex-1 flex flex-col justify-center sm:justify-between sm:pt-16 md:pt-20 gap-8 sm:gap-0 py-10 sm:py-0">
+          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,41 +40,41 @@ export function Hero16() {
               initialDelay={700}
             />
           </motion.h1>
-        </div>
 
-        {/* Bottom — Subtitle Left + CTA Right */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-5 sm:gap-8">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal flex-1 min-w-0 max-w-md"
-          >
-            Software engineer focused on crafting clean, impactful
-            digital experiences from front to back.
-          </motion.p>
+          {/* Subtitle + CTA */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-5 sm:gap-8">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-sm sm:text-base md:text-lg text-neutral-300 leading-relaxed font-normal flex-1 min-w-0 max-w-md"
+            >
+              Software engineer focused on crafting clean, impactful
+              digital experiences from front to back.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex items-center gap-2.5 w-full sm:w-auto shrink-0"
-          >
-            <motion.a
-              href="#projects"
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-neutral-800 border border-neutral-700 text-white text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex items-center gap-2.5 w-full sm:w-auto shrink-0"
             >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-white text-neutral-900 text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-200 transition-colors duration-200 whitespace-nowrap"
-            >
-              Work With Me
-            </motion.a>
-          </motion.div>
+              <motion.a
+                href="#contact"
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-white text-neutral-900 text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-200 transition-colors duration-200 whitespace-nowrap"
+              >
+                Work With Me
+              </motion.a>
+              <motion.a
+                href="#projects"
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center justify-center flex-1 sm:flex-none px-8 py-4 rounded-xl bg-neutral-800 border border-neutral-700 text-white text-[11px] sm:text-xs font-medium tracking-[0.12em] uppercase cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
+              >
+                View My Work
+              </motion.a>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,17 +1,45 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import Image from "next/image";
+import { useRef } from "react";
+
+function SkillBar({ item, index }: { item: { label: string; percentage: number; color: string }; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.45, delay: 0.3 + index * 0.05 }}
+      className="flex flex-col gap-1.5"
+    >
+      <span className="text-sm text-white">{item.label}</span>
+      <div ref={ref} className="relative w-full h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+        <div
+          className="h-full rounded-full"
+          style={{
+            backgroundColor: item.color,
+            width: isInView ? `${item.percentage}%` : "0%",
+            transition: `width 1s ${0.4 + index * 0.05}s ease-out`,
+          }}
+        />
+      </div>
+    </motion.div>
+  );
+}
 
 const skills = [
-  { label: "React",        percentage: 95,   color: "bg-cyan-500" },
-  { label: "JavaScript",   percentage: 92,   color: "bg-yellow-400" },
-  { label: "React Native", percentage: 90,   color: "bg-teal-500" },
-  { label: "TypeScript",   percentage: 87.5, color: "bg-blue-400" },
-  { label: "Figma",        percentage: 85,   color: "bg-pink-500" },
-  { label: "AWS",          percentage: 85,   color: "bg-orange-400" },
-  { label: "Node.js",      percentage: 78,   color: "bg-green-500" },
-  { label: "PHP",          percentage: 72,   color: "bg-indigo-500" },
+  { label: "React",        percentage: 95,   color: "#06b6d4" },
+  { label: "JavaScript",   percentage: 92,   color: "#facc15" },
+  { label: "React Native", percentage: 90,   color: "#14b8a6" },
+  { label: "TypeScript",   percentage: 87.5, color: "#60a5fa" },
+  { label: "Figma",        percentage: 85,   color: "#ec4899" },
+  { label: "AWS",          percentage: 85,   color: "#fb923c" },
+  { label: "Node.js",      percentage: 78,   color: "#22c55e" },
+  { label: "PHP",          percentage: 72,   color: "#6366f1" },
 ];
 
 export function Stats7() {
@@ -76,7 +104,7 @@ export function Stats7() {
               className="text-base text-neutral-400 leading-relaxed max-w-md"
             >
               I care about the details — clean code, fast interfaces, and experiences people
-              actually enjoy using. Currently based between Miami and Monterrey.
+              actually enjoy using.
             </motion.p>
 
             {/* Stats row */}
@@ -125,27 +153,7 @@ export function Stats7() {
 
             <div className="flex flex-col gap-5">
               {skills.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.45, delay: 0.3 + index * 0.05 }}
-                  className="flex flex-col gap-1.5"
-                >
-                  <div className="flex items-center">
-                    <span className="text-sm text-white">{item.label}</span>
-                  </div>
-                  <div className="relative w-full h-1.5 bg-neutral-800 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${item.percentage}%` }}
-                      viewport={{ once: true, margin: "-80px" }}
-                      transition={{ duration: 1, delay: 0.4 + index * 0.05, ease: "easeOut" }}
-                      className={`h-full ${item.color} rounded-full`}
-                    />
-                  </div>
-                </motion.div>
+                <SkillBar key={item.label} item={item} index={index} />
               ))}
             </div>
           </div>

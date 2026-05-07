@@ -75,7 +75,7 @@ export function Footer7() {
               Socials
             </h4>
             <div className="flex items-center gap-5">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">
+              <a href="https://github.com/wonseobi" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">
                 <GitHubIcon />
               </a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/60 transition-colors">

@@ -359,7 +359,6 @@ const projects: Project[] = [
     description: "Cross-platform mobile applications for managing domains, websites, and digital services across iOS and Android. Scalable React Native architecture and seamless user experiences.",
     year: "2024",
     tags: ["Mobile"],
-    image: "/images/projects/certerus_app.jpg",
   },
   {
     id: 40,
@@ -377,7 +376,6 @@ const projects: Project[] = [
     year: "2024",
     tags: ["Mobile"],
     href: "https://www.figma.com/proto/Zir0qUqmCDvtwRIZcx379V/Streakify-App?node-id=22-423&starting-point-node-id=22%3A423&t=BXvZSAh8b5hGqLVc-1",
-    image: "/images/projects/streakify.jpg",
   },
   {
     id: 42,
@@ -386,7 +384,6 @@ const projects: Project[] = [
     year: "2023",
     tags: ["Mobile"],
     href: "https://www.figma.com/proto/PM560bWw6spRbLvQWWkckA/Weatherly-App?node-id=2002-211&starting-point-node-id=2002%3A211&t=K7tgylJugD9YIIbx-1",
-    image: "/images/projects/weatherly.jpg",
   },
   {
     id: 43,
@@ -433,7 +430,7 @@ const projects: Project[] = [
 //      Xponent=2, Injury Counsel FL=19, Royal Smiles=17, Daytona Liberty=1,
 //      Orcutt Hills=12, Sonrisa=24, Synergy=44, AOX=6,
 //      Rooftop Geovana=30, Mentor E-Learning=40, Certerus App=39, Connection Dentistry=15
-const DEFAULT_ORDER_IDS = [17, 43, 30, 2, 46, 12, 44, 19, 29, 15, 38, 6, 1, 40, 24, 39];
+const DEFAULT_ORDER_IDS = [17, 43, 30, 2, 46, 12, 44, 19, 29, 15, 38, 6, 1, 40, 24, 45];
 
 const projectMap = new Map(projects.map((p) => [p.id, p]));
 

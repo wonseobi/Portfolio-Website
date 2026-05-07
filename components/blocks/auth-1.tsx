@@ -74,7 +74,7 @@ export function Auth1() {
   return (
     <section id="contact" className="min-h-screen w-full flex" suppressHydrationWarning>
       {/* Left Column - Form */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-between p-6 sm:p-8 lg:p-14 bg-neutral-950">
+      <div className="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-14 bg-neutral-950">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -201,11 +201,11 @@ export function Auth1() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.4 }}
-          className="w-full max-w-md mx-auto"
+          className="w-full max-w-md mx-auto mt-8 lg:mt-auto"
         >
           <div className="flex items-center gap-6 text-sm text-neutral-600">
             <a href="mailto:wonseob2207@gmail.com" className="hover:text-white transition-colors">wonseob2207@gmail.com</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://github.com/wonseobi" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
           </div>
         </motion.div>
