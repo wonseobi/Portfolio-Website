@@ -8,7 +8,8 @@ import { Stats7 } from "@/components/blocks/stats-7";
 import { SocialProof8 } from "@/components/blocks/social-proof-8";
 import { Faq4 } from "@/components/blocks/faq-4";
 import { Cta6 } from "@/components/blocks/cta-6";
-import { Auth1 } from "@/components/blocks/auth-1";
+import dynamic from "next/dynamic";
+const Auth1 = dynamic(() => import("@/components/blocks/auth-1").then(m => m.Auth1), { ssr: false });
 import { Footer7 } from "@/components/blocks/footer-7";
 
 export default function Home() {
