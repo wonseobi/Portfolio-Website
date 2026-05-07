@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { motion, useScroll, useTransform, useSpring, MotionValue } from "motion/react";
 import Image from "next/image";
 
 // ── Real project images spread across industries ──────────────────────────────
@@ -47,7 +47,7 @@ function ImageStrip({
   x,
 }: {
   images: string[];
-  x: ReturnType<typeof useSpring>;
+  x: MotionValue<string>;
 }) {
   return (
     <motion.div className="flex gap-4 shrink-0" style={{ x }}>
