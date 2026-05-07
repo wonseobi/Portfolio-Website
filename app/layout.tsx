@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   title: "Won Lee — Portfolio",
   description: "Software engineer focused on crafting clean, impactful digital experiences from front to back.",
   icons: {
-    icon: "/favicon.svg",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
   },
 };
 
