@@ -29,13 +29,8 @@ const TailwindIcon = () => (
 );
 
 const FigmaIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="w-1/2 h-1/2 text-neutral-300">
-    <path d="M8 2h8a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v0a2 2 0 0 1 2-2z" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M6 6h6v4H6z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    <path d="M12 6h0a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M6 10h6v4H6z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    <path d="M6 14h6v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    <circle cx="12" cy="16" r="2" stroke="currentColor" strokeWidth="1.5" />
+  <svg fill="#ffffff" viewBox="0 0 24 24" className="w-1/2 h-1/2 opacity-70">
+    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z" />
   </svg>
 );
 
@@ -43,19 +38,13 @@ const logoCells: Cell[] = [
   { r: 0, c: 1, icon: <ReactIcon /> },
   { r: 0, c: 5, icon: <Img src="/icons/typescript.png" alt="TypeScript" /> },
   { r: 0, c: 8, icon: <Img src="/icons/js.png" alt="JavaScript" /> },
-  { r: 1, c: 0, icon: <Img src="/icons/smartphone.png" alt="React Native" /> },
   { r: 1, c: 6, icon: <TailwindIcon /> },
   { r: 1, c: 9, icon: <FigmaIcon /> },
   { r: 2, c: 1, icon: <Img src="/icons/github.png" alt="GitHub" /> },
   { r: 2, c: 9, icon: <Img src="/icons/database.png" alt="Database" /> },
-  { r: 3, c: 0, icon: <Img src="/icons/php.png" alt="PHP" /> },
   { r: 3, c: 10, icon: <Img src="/icons/docker.png" alt="Docker" /> },
-  { r: 4, c: 2, icon: <Img src="/icons/html.png" alt="HTML" /> },
   { r: 4, c: 5, icon: <Img src="/icons/python.png" alt="Python" /> },
   { r: 4, c: 8, icon: <Img src="/icons/cloud.png" alt="AWS" /> },
-  { r: 5, c: 1, icon: <Img src="/icons/icon1.png" alt="Tech" /> },
-  { r: 5, c: 6, icon: <Img src="/icons/smartphone.png" alt="Mobile" /> },
-  { r: 5, c: 9, icon: <Img src="/icons/typescript.png" alt="TypeScript" /> },
 ];
 
 const COLS = 11;
