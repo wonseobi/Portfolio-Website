@@ -49,7 +49,7 @@ export function Faq4() {
             >
               FAQ
             </motion.span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
               Questions I get asked a lot.
             </h2>
             <motion.p
