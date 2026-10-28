@@ -59,7 +59,7 @@ export function SocialProof8() {
         <TextType
           text="What people say about working with me."
           loop={false}
-          showCursor={true}
+          showCursor={false}
           hideCursorOnComplete={true}
           startOnVisible={true}
           typingSpeed={38}

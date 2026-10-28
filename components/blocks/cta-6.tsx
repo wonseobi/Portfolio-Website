@@ -108,10 +108,11 @@ const cellHash = (r: number, c: number) => {
 
 export function Cta6() {
   return (
-    <section className="w-full flex items-center justify-center py-20 sm:py-28 px-8 sm:px-12 lg:px-20 bg-transparent overflow-hidden">
+    <section className="w-full flex items-center justify-center py-16 sm:py-28 px-6 sm:px-12 lg:px-20 bg-transparent overflow-hidden">
       <div className="relative max-w-[1400px] mx-auto w-full">
         <div
-          className="grid gap-1.5 sm:gap-2 md:gap-3 lg:gap-4"
+          aria-hidden
+          className="absolute inset-0 opacity-20 sm:static sm:opacity-100 grid content-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4"
           style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}
         >
           {Array.from({ length: ROWS * COLS }).map((_, idx) => {
@@ -170,24 +171,24 @@ export function Cta6() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          className="relative py-12 sm:py-0 sm:absolute sm:inset-0 flex flex-col items-center justify-center text-center px-2 sm:px-4"
         >
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-[1.05] max-w-[22ch]">
             <TextType
               text="Let's build something great together."
               loop={false}
-              showCursor={true}
+              showCursor={false}
               hideCursorOnComplete={true}
               startOnVisible={true}
               typingSpeed={40}
             />
           </h2>
-          <div className="mt-6 flex items-center gap-3 flex-wrap justify-center">
+          <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-sm sm:flex sm:w-auto sm:max-w-none justify-center">
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="px-6 py-3 rounded-xl bg-white text-neutral-900 text-sm font-medium cursor-pointer hover:bg-neutral-200 transition-colors duration-200"
+              className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-neutral-900 text-sm font-medium cursor-pointer hover:bg-neutral-200 transition-colors duration-200"
             >
               Work With Me
             </motion.a>
@@ -196,7 +197,7 @@ export function Cta6() {
               download
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="px-6 py-3 rounded-xl bg-transparent border border-neutral-600 text-white text-sm font-medium cursor-pointer hover:border-neutral-400 hover:bg-neutral-800/50 transition-colors duration-200"
+              className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-transparent border border-neutral-600 text-white text-sm font-medium cursor-pointer hover:border-neutral-400 hover:bg-neutral-800/50 transition-colors duration-200"
             >
               Download CV
             </motion.a>

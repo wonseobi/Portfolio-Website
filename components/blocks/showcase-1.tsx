@@ -78,7 +78,7 @@ export function Showcase1() {
   return (
     <section
       id="works"
-      className="w-full min-h-screen flex items-start lg:items-center py-24 px-8 sm:px-12 lg:px-20 bg-transparent"
+      className="w-full min-h-screen flex items-start lg:items-center py-20 sm:py-24 px-6 sm:px-12 lg:px-20 bg-transparent"
     >
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Section label */}
@@ -93,11 +93,11 @@ export function Showcase1() {
         </motion.p>
 
         {/* Section title */}
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-14">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-10 sm:mb-14">
           <TextType
             text="My Professional Journey So Far."
             loop={false}
-            showCursor={true}
+            showCursor={false}
             hideCursorOnComplete={true}
             startOnVisible={true}
             typingSpeed={40}
@@ -115,7 +115,7 @@ export function Showcase1() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
-                className="relative w-full text-left py-6 sm:py-8"
+                className="relative w-full text-left py-5 sm:py-8"
               >
                 {activeId === job.id && (
                   <motion.div
@@ -125,7 +125,7 @@ export function Showcase1() {
                   />
                 )}
                 <div
-                  className={`relative px-4 sm:px-6 flex items-center justify-between gap-4 ${
+                  className={`relative pl-4 pr-10 sm:pl-6 sm:pr-14 flex items-center justify-between gap-4 ${
                     activeId === job.id
                       ? ""
                       : "transition-opacity duration-300 hover:opacity-60"
@@ -169,7 +169,7 @@ export function Showcase1() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative flex items-center min-h-[360px]"
+            className="relative flex items-center lg:min-h-[360px]"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -182,7 +182,7 @@ export function Showcase1() {
               >
                 {/* Header */}
                 <div className="mb-8">
-                  <h3 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
+                  <h3 className="text-2xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
                     {activeJob.role}
                   </h3>
                   <p className="text-base text-neutral-400">
@@ -196,7 +196,7 @@ export function Showcase1() {
                 {/* Bullets */}
                 <ul className="space-y-4 mb-8">
                   {activeJob.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-4 text-base text-neutral-300 leading-relaxed">
+                    <li key={i} className="flex gap-3 sm:gap-4 text-[15px] sm:text-base text-neutral-300 leading-relaxed">
                       <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-neutral-500 shrink-0" />
                       {b}
                     </li>

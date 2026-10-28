@@ -97,7 +97,7 @@ export function Auth1() {
               <TextType
                 text="Let's work together."
                 loop={false}
-                showCursor={true}
+                showCursor={false}
                 hideCursorOnComplete={true}
                 startOnVisible={true}
                 typingSpeed={50}

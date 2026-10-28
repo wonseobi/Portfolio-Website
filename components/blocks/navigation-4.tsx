@@ -40,7 +40,7 @@ export function Navigation4() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-4"
+            className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-[#0a0a0f]/75 backdrop-blur-xl border-b border-white/5"
           >
             <div className="flex items-center justify-between">
               <div className="text-left">
@@ -53,7 +53,7 @@ export function Navigation4() {
               </div>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="flex h-10 w-10 items-center justify-center rounded-md bg-neutral-900 dark:bg-white text-white dark:text-neutral-900"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
                 {mobileMenuOpen ? (
